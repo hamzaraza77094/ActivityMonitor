@@ -1,5 +1,7 @@
 In order to run this.
 
+Project Video: https://drive.google.com/file/d/1_5HYXQ0GbF5ChaJDjv2hR_eqlQv4O0Dk/view?usp=share_link
+
 On line 200 of the code you will have to enter your own API Key for OpenAI as we cannot upload our key to github or else it will deprecate itself. Once you have done that move to the bottom command.
 
 run "python3 legacy_activity.py"
