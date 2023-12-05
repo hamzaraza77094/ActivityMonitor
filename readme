@@ -19,3 +19,6 @@ Important Code Breakdown:
 - train_model.py: Our future model that we want to have run once we have enough of the dataset in productivity_data.csv
 - producitivty_data.csv: Updated csv of the user
 - productivity_data_original: Our original csv file of what we originally trained the model on
+
+Another important fact: 
+- It might not show that all of us in our team worked on it but we all downloaded it locally and worked on it together
