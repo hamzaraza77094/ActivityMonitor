@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 import joblib
-
+from chatgpt import generate
 
 # Phase 2: Define Helper Functions
 def makeGraph(dataframe):
@@ -185,6 +185,22 @@ else:
     print("Data length mismatch, can't create Tab DataFrame.")
 
 
+# Collecting the most visited and productive websites
+productive_websites = [website for website, productivity in zip(visited_websites, website_productivity) if productivity == 'productive']
+most_visited_websites = pd.Series(visited_websites).value_counts().head(5).index.tolist()
+
+# Creating a summary of the user's browsing habits
+browsing_summary = f"I have analyzed a user's browsing data and found that their most visited websites are: {', '.join(most_visited_websites)}. The websites they find most productive are: {', '.join(productive_websites)}. Based on this information,"
+
+# Formulating the prompt for ChatGPT
+prompt = f"{browsing_summary} can you recommend similar websites that might be beneficial for their productivity? Also can you recommend sites that are similar to the websites that are productive and explain how they can help towards the productivity. Also, could you provide a study or working tip to encourage the user to maintain or improve productivity?"
+
+
+#Return api
+# Name the API key something 
+# api_key = "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"
+chatgpt_response = generate(prompt, api_key)
+print(chatgpt_response)
 # Phase 9: Calculate Productivity
 # Phase 10: Display Productivity Graph
 # At the end of the script

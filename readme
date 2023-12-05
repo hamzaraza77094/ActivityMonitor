@@ -1,0 +1,21 @@
+In order to run this.
+
+On line 200 of the code you will have to enter your own API Key for OpenAI as we cannot upload our key to github or else it will deprecate itself. Once you have done that move to the bottom command.
+
+run "python3 legacy_activity.py"
+
+After the allotted time has passed then it will show data analytics. It might take some time as the call to the API takes a bit of time.
+
+Expect: 
+- 3 matplotlib GUI graphs
+- Recommendation in the terminal
+
+
+Important Code Breakdown: 
+- legacy_activity.py: the file that we are wanting to mainly run
+- chatgpt.py: Helper file to legacy_activity.py
+- ActivityTracker.py: Refactored version of the code of legacy_activity to try to make it work with the frontend code but wasnt able to yet
+- frontend.py: The expected frontend we wanted
+- train_model.py: Our future model that we want to have run once we have enough of the dataset in productivity_data.csv
+- producitivty_data.csv: Updated csv of the user
+- productivity_data_original: Our original csv file of what we originally trained the model on
